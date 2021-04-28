@@ -1,16 +1,15 @@
+import ch.abbts.model.Model;
+import ch.abbts.model.Util;
+
 public class ColorSensor {
     String name;
     int port;
 
     String getColor() {
-        return null;
-    }
-
-    int getRoomLight() {
-        return 0;
-    }
-
-    int getReflectingLight() {
-        return 0;
+        while (Model.in.getColor(port) == "keine") {
+            Util.delay(100);
+            //Thread.sleep(100);
+        }
+        return Model.in.getColor(port);
     }
 }
