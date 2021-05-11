@@ -13,7 +13,7 @@ public class Motor {
         for (double i = 0; i < duration ; i = i + 0.1) {
             Util.delay(100);
         }
-        Model.out.setDisplay("Gate opened!");
+        Model.out.setDisplay("Gate open");
     }
 
     void closeGate() {
@@ -24,6 +24,6 @@ public class Motor {
         for (double i = 0; i < duration ; i = i + 0.1) {
             Util.delay(100);
         }
-        Model.out.setDisplay("Gate closed!");
+        Model.out.setDisplay("Gate closed");
     }
 }

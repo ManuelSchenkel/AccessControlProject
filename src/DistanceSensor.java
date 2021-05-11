@@ -6,8 +6,10 @@ public class DistanceSensor {
     int port;
 
     boolean isNear(double minDistance, double maxDistance) {
-        while (Model.in.getDistance(port) > minDistance || Model.in.getDistance(port) < maxDistance) {
+        double distance = Model.in.getDistance(port);
+        while (!(distance > minDistance && distance < maxDistance)) {
             Util.delay(100);
+            distance = Model.in.getDistance(port);
         }
         return true;
     }

@@ -10,6 +10,7 @@ public class ColorSensor {
             Util.delay(100);
             //Thread.sleep(100);
         }
+        //System.out.println(Model.in.getColor(port));
         return Model.in.getColor(port);
     }
 }
