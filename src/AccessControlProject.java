@@ -58,7 +58,7 @@ public class AccessControlProject {
         while (runAccessControl) {
             //nach erstem Durchlauf wird hier immer die da gemessene Distanz verwendet..
             //ausser ich erzeuge das Objekt erst an dieser Stelle und überschreibe es mit jeder Iteration
-            //Warum?
+            //Warum? Liegt das an der Vererbung?
             DistanceSensor distanceSensor = new DistanceSensor();
             distanceSensor.name = "Distanzsensor 1";
             distanceSensor.port = 1;
