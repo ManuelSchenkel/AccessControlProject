@@ -5,14 +5,14 @@ public class DistanceSensor {
     String name;
     int port;
 
-    boolean isNear() {
+    boolean isNear(double minDistance, double maxDistance) {
+        while (Model.in.getDistance(port) > minDistance || Model.in.getDistance(port) < maxDistance) {
+            Util.delay(100);
+        }
         return true;
     }
 
     double getDistance() {
-        while (Model.in.getDistance(port) > 2.5 || Model.in.getDistance(port) < 0.03) {
-            Util.delay(100);
-        }
         return Model.in.getDistance(port);
     }
 
