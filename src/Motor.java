@@ -2,8 +2,30 @@ import ch.abbts.model.Model;
 import ch.abbts.model.Util;
 
 public class Motor {
-    String name;
-    String port;
+    private String name;
+    private String port;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPort(String port) {
+        if (port.equals("A")) {
+            this.port = port;
+        } else {
+            System.out.println("Port " + port + ": ungültige Portnummer");
+            System.exit(1);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Motor Name: " + name + ", Port: " + port;
+    }
 
     void openGate() {
         Model.out.rotateTo("A", -180);
