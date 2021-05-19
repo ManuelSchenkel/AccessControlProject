@@ -20,14 +20,10 @@ public class AccessControlProject {
         colorSensor.setPort(2);
 
         //Datentyp  Variable       Konstruktor
-        TouchSensor touchSensor1 = new TouchSensor();
-        touchSensor1.setName("Taste 1");
-        touchSensor1.setPort(3);
+        TouchSensor touchSensor1 = new TouchSensor("Taste 1", 3);
         System.out.println(touchSensor1.toString());
 
-        TouchSensor touchSensor2 = new TouchSensor();
-        touchSensor2.setName("Taste 2");
-        touchSensor2.setPort(4);
+        TouchSensor touchSensor2 = new TouchSensor("Taste 2", 4;
         //sout sucht nach toString Methode by default, sofern keine Methode aufgerufen wird)
         System.out.println(touchSensor2);
         //System.exit(1);

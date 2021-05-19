@@ -2,9 +2,18 @@ import ch.abbts.model.Model;
 import ch.abbts.model.Util;
 
 public class TouchSensor {
+    //Membervariablen
     private String name;
     private int port;
 
+    //Konstruktor
+    public TouchSensor(String name, int port) {
+        //this.name = name;
+        setName(name);
+        setPort(port);
+    }
+
+    //Methoden
     public void setName(String name) {
         this.name = name;
     }
