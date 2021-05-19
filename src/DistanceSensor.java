@@ -35,11 +35,11 @@ public class DistanceSensor {
         return Model.in.getDistance(port);
     }
 
-    double measureDistanceCm() {
+    /*double measureDistanceCm() {
         return 0.0;
     }
 
     double measureDistanceInch() {
         return 0.0;
-    }
+    }*/
 }
