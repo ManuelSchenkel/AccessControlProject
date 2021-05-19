@@ -27,7 +27,7 @@ public class ColorSensor {
         }
     }
 
-    String getColor() {
+    public String getColor() {
         while (Model.in.getColor(port) == "keine") {
             Util.delay(100);
             //Thread.sleep(100);
