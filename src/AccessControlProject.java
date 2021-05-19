@@ -11,26 +11,14 @@ public class AccessControlProject {
         double minDistance = 0.5;
         double maxDistance = 1.5;
 
-        DistanceSensor distanceSensor = new DistanceSensor();
-        distanceSensor.setName("Distanzsensor 1");
-        distanceSensor.setPort(1);
+        DistanceSensor distanceSensor = new DistanceSensor("Distanzsensor 1", 1);
 
-        ColorSensor colorSensor = new ColorSensor();
-        colorSensor.setName("Farbsensor 1");
-        colorSensor.setPort(2);
+        ColorSensor colorSensor = new ColorSensor("Farbsensor 1",2);
 
-        //Datentyp  Variable       Konstruktor
         TouchSensor touchSensor1 = new TouchSensor("Taste 1", 3);
-        System.out.println(touchSensor1.toString());
+        TouchSensor touchSensor2 = new TouchSensor("Taste 2", 4);
 
-        TouchSensor touchSensor2 = new TouchSensor("Taste 2", 4;
-        //sout sucht nach toString Methode by default, sofern keine Methode aufgerufen wird)
-        System.out.println(touchSensor2);
-        //System.exit(1);
-
-        Motor motor = new Motor();
-        motor.setName("Motor 1");
-        motor.setPort("A");
+        Motor motor = new Motor("Motor 1","A");
 
         /*Ablauf Zutritt
         1. Distanz prüfen

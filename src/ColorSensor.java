@@ -5,6 +5,11 @@ public class ColorSensor {
     private String name;
     private int port;
 
+    public ColorSensor(String name, int port) {
+        setName(name);
+        setPort(port);
+    }
+
     public String getName() {
         return name;
     }

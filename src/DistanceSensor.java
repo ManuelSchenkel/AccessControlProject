@@ -9,6 +9,11 @@ public class DistanceSensor {
         return name;
     }
 
+    public DistanceSensor(String name, int port) {
+        setName(name);
+        setPort(port);
+    }
+
     public void setName(String name) {
         this.name = name;
     }

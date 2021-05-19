@@ -5,6 +5,11 @@ public class Motor {
     private String name;
     private String port;
 
+    public Motor(String name, String port) {
+        setName(name);
+        setPort(port);
+    }
+
     public String getName() {
         return name;
     }
