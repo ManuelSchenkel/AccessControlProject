@@ -5,13 +5,13 @@ public class DistanceSensor {
     private String name;
     private int port;
 
-    public String getName() {
-        return name;
-    }
-
     public DistanceSensor(String name, int port) {
         setName(name);
         setPort(port);
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
@@ -27,7 +27,7 @@ public class DistanceSensor {
         }
     }
 
-    boolean isNear(double minDistance, double maxDistance) {
+    public boolean isNear(double minDistance, double maxDistance) {
         double distance = getDistance();
         while (!(distance > minDistance && distance < maxDistance)) {
             Util.delay(100);
@@ -36,8 +36,13 @@ public class DistanceSensor {
         return true;
     }
 
-    double getDistance() {
+    public double getDistance() {
         return Model.in.getDistance(port);
+    }
+
+    @Override
+    public String toString() {
+        return "DistanzSensor Name: " + name + ", Port: " + port;
     }
 
     /*double measureDistanceCm() {

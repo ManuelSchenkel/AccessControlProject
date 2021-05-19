@@ -32,7 +32,7 @@ public class Motor {
         return "Motor Name: " + name + ", Port: " + port;
     }
 
-    void openGate() {
+    public void openGate() {
         Model.out.rotateTo("A", -180);
         Model.out.setDisplay("Opening gate");
         Model.out.setSpeed("A", 90);
@@ -43,7 +43,7 @@ public class Motor {
         Model.out.setDisplay("Gate open");
     }
 
-    void closeGate() {
+    public void closeGate() {
         Model.out.rotateTo("A", 0);
         Model.out.setDisplay("Closing gate...");
         Model.out.setSpeed("A", 90);
